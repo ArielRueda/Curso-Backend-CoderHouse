@@ -33,8 +33,8 @@ class ProductManager{
                     stock, 
                 }
                 let products = await this.getProducts();
-                let codeValues = products.find(product => product['code'] === code);
-                if(!codeValues){
+                let validacionCode = products.find(product => product['code'] === code);
+                if(!validacionCode){
                     if (products.length === 0) {
                         product['id'] = 1;
                     }else{
@@ -44,10 +44,10 @@ class ProductManager{
                     await fs.promises.writeFile(this.path, JSON.stringify(products, null, '\t'));
                     return products;
                 }else{
-                    console.log('Codigo de producto ya existente');
+                    console.log('Codigo de producto ya existe');
                 }
             }else{
-                console.log("falta informacion para agregar producto");
+                console.log("falta informacion para agregar el  producto");
             }
         }catch(error){
             console.log(error);
@@ -57,11 +57,11 @@ class ProductManager{
     async getProductById(id){
         try{
             let products = await this.getProducts();
-            let myProduct = products.find((product) => product.id === id);
-            if(myProduct != null){
-                return myProduct;
+            let producto = products.find((product) => product.id === id);
+            if(producto != null){
+                return producto;
             }else{
-                console.log('Producto no encontrado');
+                console.log('el Producto  no existe');
             }
         }catch(error){
             console.log(error);
@@ -71,14 +71,14 @@ class ProductManager{
     async updateProduct(id, title, description, price, thumbnail, code, stock){
         try{
             let products = await this.getProducts();
-            let myProduct = products.find((product) => product['id'] === id);
-            if(myProduct!= null){
-                myProduct.title = title;
-                myProduct.description = description;
-                myProduct.price = price;
-                myProduct.thumbnail = thumbnail;
-                myProduct.code = code;
-                myProduct.stock = stock;
+            let producto = products.find((product) => product['id'] === id);
+            if(producto!= null){
+                producto.title = title;
+                producto.description = description;
+                producto.price = price;
+                producto.thumbnail = thumbnail;
+                producto.code = code;
+                producto.stock = stock;
                 await fs.promises.writeFile(this.path, JSON.stringify(products, null, '\t'));
             }
         } catch(error){
@@ -89,9 +89,9 @@ class ProductManager{
     async deleteProduct(id){
         try{
             let products = await this.getProducts();
-            let myProduct = products.find(product => product['id'] === id);
-            if(myProduct!= null){
-                products.splice(products.indexOf(myProduct), 1);
+            let producto = products.find(product => product['id'] === id);
+            if(producto!= null){
+                products.splice(products.indexOf(producto), 1);
                 await fs.promises.writeFile(this.path, JSON.stringify(products, null, '\t'));
             }
         }catch(error){
@@ -102,8 +102,9 @@ class ProductManager{
 
 
 
-// PRUEBAS 
+
 
 
 let fileName = "./Products.JSON";
 let productos = new ProductManager(fileName);
+productos.deleteProduct().then(()=> productos.getProducts().then((res) => console.log(res)));

@@ -1,0 +1,11 @@
+[
+	{
+		"title": "arroz",
+		"description": "es la semila de la planta oryza sativa",
+		"price": 180,
+		"thumbnail": "Sin imagen",
+		"code": "374346",
+		"stock": 30,
+		"id": 2
+	}
+]
