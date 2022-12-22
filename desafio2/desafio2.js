@@ -105,6 +105,6 @@ class ProductManager{
 
 
 
-let fileName = "./Products.JSON";
+let fileName = "./Productos.JSON";
 let productos = new ProductManager(fileName);
 productos.deleteProduct().then(()=> productos.getProducts().then((res) => console.log(res)));
