@@ -34,8 +34,10 @@ class ProductManager {
             if (this.products.length === 0) {
                 products["id"] = 1
                 this.products.push(products);
+                
             } else {
                 let validacionCode = this.products.find(product => product["code"] === code)
+               
                 if (!validacionCode) {
                     products["id"] = this.products[this.products.length - 1]["id"] + 1
                     this.products.push(products);
