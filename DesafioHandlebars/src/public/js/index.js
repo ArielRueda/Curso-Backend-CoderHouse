@@ -1,8 +1,8 @@
 const socket = io("http://localhost:8080")
 let arrayProductos = []
-document.getElementById("send").addEventListener("click", postProduct)
+document.getElementById("send").addEventListener("click", productos)
 
-function postProduct() {
+function productos() {
   let product = {
     "title": document.getElementById("title").value,
     "description": document.getElementById("description").value,
