@@ -1,10 +1,9 @@
 body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
-  color: #2b3e51;
+  color: #d3dd35;
   background-color: #1F2023;
 }
-
 
 h2 {
   font-weight: 300;
@@ -19,7 +18,7 @@ a,
 a:link,
 a:visited,
 a:active {
-  color: #e3ef2fe0;
+  color: #3ca9e2;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
@@ -30,19 +29,30 @@ a:visited:focus,
 a:visited:hover,
 a:active:focus,
 a:active:hover {
-  color: #e3ef2fe0;
+  color: #329dd5;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-
+.boton-index{
+  background-color: #aeb187;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+.ruteo-index{
+  text-decoration: none;
+  color: white!important;
+  
+}
 #login-form-wrap {
-  background-color: #1F2023;
+  box-shadow: 0px 30px 50px 0px #d3dd35;
   width: 35%;
   margin: 30px auto;
   text-align: center;
   padding: 20px 0 0 0;
   border-radius: 4px;
-  box-shadow: 0px 30px 50px 0px #d3dd35;
+  background-color: #1F2023;
+  color: #d3dd35;
 }
 
 #login-form {
@@ -55,15 +65,12 @@ a:active:hover {
   text-align: center;
   padding: 20px 0 0 0;
   border-radius: 4px;
-     box-shadow: 0px 30px 50px 0px #d3dd35;
+  color: #d3dd35;
+  box-shadow: 0px 30px 50px 0px #d3dd35;
 }
 
 #register-form {
   padding: 0 60px;
-}
-.logo{
-  font-size: 4rem;
-  color: #d3dd35;
 }
 
 
@@ -132,9 +139,6 @@ input[type="email"]:valid ~ .validation span:last-child {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
-h2{
-  color:#e3ef2fe0;
-}
 
 .validation {
   display: none;
@@ -149,7 +153,7 @@ h2{
 button[type="submit"] {
   border: none;
   display: block;
-  background-color: #e3ef2fe0;
+  background-color: #3ca9e2;
   color: #fff;
   font-weight: bold;
   text-transform: uppercase;
@@ -161,8 +165,6 @@ button[type="submit"] {
   display: inline-block;
   cursor: pointer;
   text-align: center;
-  border-radius: 17px;
-  height: 40px;
 }
 button[type="submit"]:hover {
   background-color: #329dd5;
@@ -171,28 +173,10 @@ button[type="submit"]:hover {
 }
 
 #create-account-wrap {
-  background-color: #1F2023;
+  background-color: #eeedf1;
   color: #8a8b8e;
   font-size: 14px;
   width: 100%;
   padding: 10px 0;
   border-radius: 0 0 4px 4px;
 }
-.boton-index{
-  background-color: #4035dd;
-  color: white;
-  border-radius: 10px;
-}
-.boton-cerrar-sesion{
-  background-color:#219158;
-  border-radius: 0 0 4px 4px;
-  height: 2rem;
-
-  position: relative;
-  left: 45%;
-}
-
-
-
-5635186 numero de cliente edesur
-172556572 numero de reclamo edesur

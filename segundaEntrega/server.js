@@ -72,3 +72,10 @@ io.on('connection', async (socket) => {
 
 
 
+  "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.9.1",
+    "nodemon": "^2.0.20"
